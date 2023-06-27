@@ -1,23 +1,32 @@
 @font-face {
-  font-family: "Rubik-Medium";
-  src: url("../fonts/Rubik-Medium.ttf") format("truetype"); }
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Rubik-Regular.ttf") format("truetype");
+  font-display: swap; }
 @font-face {
-  font-family: "Rubik-Light";
-  src: url("../fonts/Rubik-Light.ttf") format("truetype"); }
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-display: swap; }
 @font-face {
-  font-family: "Rubik-Bold";
-  src: url("../fonts/Rubik-Bold.ttf") format("truetype"); }
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Rubik-Medium.ttf") format("truetype");
+  font-display: swap; }
 @font-face {
-  font-family: "Rubik-Semibold";
-  src: url("../fonts/Rubik-SemiBold.ttf") format("truetype"); }
-@font-face {
-  font-family: "Rubik-Regular";
-  src: url("../fonts/Rubik-Regular.ttf") format("truetype"); }
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Rubik-Light.ttf") format("truetype");
+  font-display: swap; }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rubik-Regular";
+  font-family: "Rubik";
   font-size: 1rem;
   color: #282828; }
 
@@ -45,7 +54,7 @@ section {
   z-index: 99;
   border: none;
   background: #FFFFFF;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   border-radius: 43px;
   cursor: pointer;
   width: 62px;
@@ -79,6 +88,8 @@ section {
   .header__nav {
     display: flex;
     align-items: center; }
+  .header__link {
+    font-weight: 300; }
   .header__list {
     padding: 0;
     display: flex;
@@ -166,11 +177,11 @@ section {
   height: 40px;
   padding: 10px 24px 16px;
   display: flex;
-  font-family: Rubik-Medium, sans-serif; }
+  font-weight: 400; }
   .control-panel__catalog--text {
     margin-left: 10px;
     color: #FFFFFF;
-    font-family: Rubik-Medium, sans-serif; }
+    font-weight: 500; }
 .control-panel__catalog:hover {
   background: linear-gradient(82.33deg, #9E0CAA 0.26%, #242AFF 47.35%, #23FBE1 111.53%); }
 .control-panel__search {
@@ -191,11 +202,11 @@ section {
   width: inherit; }
 .control-panel__input::placeholder {
   color: #A9A9A9;
-  font-family: Rubik-Light, sans-serif; }
+  font-weight: 300; }
 .control-panel__btn {
   background: transparent;
   padding: 8px 16px;
-  font-family: Rubik-Medium, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
@@ -208,7 +219,7 @@ section {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: Rubik-Light, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 17px; }
   .control-panel__item svg {
@@ -286,7 +297,7 @@ section {
   padding: 40px 550px 40px 190px; }
 .banner__header {
   font-style: normal;
-  font-family: Rubik-Semibold, sans-serif;
+  font-weight: 600;
   font-size: 28px;
   color: #5C71B2;
   margin-bottom: 16px;
@@ -297,13 +308,13 @@ section {
   margin-bottom: 16px;
   position: relative; }
 .banner__item {
-  font-family: Rubik-Light, sans-serif;
+  font-weight: 400;
   font-size: 16px; }
 .banner__btn {
   background: #2a5cf6;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
   border-radius: 61px;
-  font-family: Rubik-Medium, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;
   padding: 11.5px 24px;
@@ -312,7 +323,7 @@ section {
   background: linear-gradient(82.33deg, #9E0CAA 0.26%, #242AFF 47.35%, #23FBE1 111.53%); }
 @media (max-width: 1200px) {
   .banner__info {
-    padding: 75px 150px 0px 100px; }
+    padding: 75px 150px 0 100px; }
   .banner__header {
     font-size: 24px; }
   .banner__item {
@@ -357,7 +368,7 @@ section {
     width: 100%;
     border-radius: 12px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin-top: 14px;
     margin-bottom: 14px; }
   .banner-mobile__slide::before {
@@ -375,14 +386,14 @@ section {
     position: absolute;
     height: 176px;
     width: 141px;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     border-top-right-radius: 12px; }
   .banner-mobile__info {
     padding: 24px 83px 25px 27px; }
   .banner-mobile__header {
     font-style: normal;
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     margin-bottom: 4px;
     color: #5C71B2;
     font-size: 16px;
@@ -393,14 +404,13 @@ section {
     margin-bottom: 4px;
     position: relative; }
   .banner-mobile__item {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 10px;
     z-index: 3; }
   .banner-mobile__btn {
     background: #2a5cf6;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
     border-radius: 61px;
-    font-family: Rubik-Medium, sans-serif;
     color: #FFFFFF;
     padding: 6px 12px;
     border: none;
@@ -444,8 +454,8 @@ section {
   background: url("../img/advantage/order4.png") no-repeat;
   width: 165px;
   height: 109px;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   border-bottom-right-radius: 40px; }
 .advantage .warehouse:before {
   content: "";
@@ -463,11 +473,11 @@ section {
   padding: 24px;
   position: relative; }
 .advantage__title {
-  font-family: Rubik-Medium, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   margin-bottom: 8px; }
 .advantage__text {
-  font-family: Rubik-Light, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.1px;
   color: #525252; }
@@ -508,7 +518,7 @@ section {
     width: 104px;
     height: 65px;
     bottom: 17px;
-    right: 0px; }
+    right: 0; }
   .advantage .warehouse:before {
     background-image: url("../img/advantage/warehouse-mobile.png");
     width: 119px;
@@ -531,7 +541,7 @@ section {
     width: 40px;
     height: 40px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 43px;
     border: none;
     cursor: pointer; }
@@ -549,12 +559,12 @@ section {
     display: flex;
     gap: 24px; }
   .catalog__title {
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     font-size: 28px;
     line-height: 33px; }
   .catalog__subheader {
     margin-right: 8px;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     color: #A9A9A9; }
@@ -600,12 +610,12 @@ section {
   .catalog__info {
     padding: 12px; }
   .catalog__name {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     margin-bottom: 12px; }
   .catalog__price {
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 24px;
     line-height: 28px; }
   .catalog__list {
@@ -617,7 +627,7 @@ section {
     padding: 6px 4px;
     border-radius: 34px;
     background: #EEEEEE;
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #525252;
@@ -639,14 +649,14 @@ section {
     height: 39px;
     border: none;
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(42, 92, 246, 0.3);
+    box-shadow: 0 0 20px rgba(42, 92, 246, 0.3);
     border-radius: 47px; }
     .catalog__add svg {
       margin-right: 8px;
       stroke: #1F6CBE; }
     .catalog__add span {
       color: #2a5cf6;
-      font-family: Rubik-Medium, sans-serif;
+      font-weight: 500;
       font-size: 16px;
       line-height: 19px; }
   .catalog__add:hover {
@@ -668,7 +678,7 @@ section {
   .catalog__info-mobile {
     display: none; }
   .catalog .catalog__card:active {
-    box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.3); }
+    box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.3); }
   @media (max-width: 768px) {
     .catalog {
       margin-bottom: 40px;
@@ -700,9 +710,9 @@ section {
         align-items: center;
         margin-bottom: 15px; }
       .catalog .catalog__card:active {
-        box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.3); }
+        box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.3); }
       .catalog__name {
-        font-family: Rubik-Regular, sans-serif;
+        font-weight: 500;
         font-size: 12px;
         margin-bottom: 8px; }
       .catalog__options {
@@ -721,7 +731,7 @@ section {
         padding: 10px 10px 10px 10px;
         border-radius: 47px;
         background: #FFF;
-        box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.3);
+        box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.3);
         margin-bottom: 16px;
         width: 148px;
         margin-left: 0; }
@@ -737,12 +747,12 @@ section {
   align-items: center;
   justify-content: space-between; }
 .about__title {
-  font-family: Rubik-Semibold, sans-serif;
+  font-weight: 600;
   font-size: 28px;
   line-height: 33px;
   margin-bottom: 24px; }
 .about__text {
-  font-family: Rubik-Regular, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 140%; }
 .about__img-mobile {
@@ -778,7 +788,7 @@ section {
   .footer__nav-mobile {
     display: none; }
   .footer__title {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     opacity: 0.7;
@@ -786,9 +796,10 @@ section {
   .footer__link {
     font-size: 14px;
     line-height: 17px;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     letter-spacing: 0.1px;
-    color: #282828; }
+    color: #282828;
+    opacity: 0.6; }
   .footer__form {
     width: 302px;
     position: relative; }
@@ -796,7 +807,7 @@ section {
     width: 36px;
     height: 36px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 11.6129px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 11.6129px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     border: none;
     position: absolute;
@@ -827,12 +838,12 @@ section {
     background: #FFFFFF;
     border: none; }
   .footer__input::placeholder {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px; }
   .footer__contacts {
     display: flex;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.1px;
@@ -843,11 +854,11 @@ section {
   .footer__list > *:not(:last-child) {
     margin-bottom: 12px; }
   .footer__subtext {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     color: #A9A9A9;
     font-size: 10px;
     line-height: 12px;
-    padding: 0px; }
+    padding: 0; }
   .footer__social {
     display: flex;
     gap: 8px; }
@@ -874,7 +885,6 @@ section {
     align-items: center;
     padding: 12px; }
   .footer__copyright {
-    font-family: Rubik-Light, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px; }

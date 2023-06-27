@@ -14,29 +14,38 @@ $xl: 1200px;
 $xxl: 1440px;
 
 
-@font-face {
-  font-family: "Rubik-Medium";
-  src: url("../fonts/Rubik-Medium.ttf") format("truetype");
-}
+
 
 @font-face {
-  font-family: "Rubik-Light";
-  src: url("../fonts/Rubik-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Rubik-Bold";
-  src: url("../fonts/Rubik-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Rubik-Semibold";
-  src: url("../fonts/Rubik-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Rubik-Regular";
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
   src: url("../fonts/Rubik-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Rubik-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Rubik-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin reset($font-family, $font-size, $color) {
@@ -55,7 +64,7 @@ $xxl: 1440px;
 }
 
 * {
-  @include reset('Rubik-Regular', 1rem, $text-default);
+  @include reset('Rubik', 1rem, $text-default);
 }
 
 
@@ -70,7 +79,6 @@ input {
 ul {
   list-style-type: none;
 }
-
 
 :active, :hover, :focus {
   outline: 0;
@@ -89,7 +97,7 @@ section {
   z-index: 99;
   border: none;
   background: #FFFFFF;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   border-radius: 43px;
   cursor: pointer;
   width: 62px;
@@ -142,7 +150,9 @@ section {
     align-items: center;
   }
 
-
+&__link{
+  font-weight: 300;
+}
   &__list {
     padding: 0;
     display: flex;
@@ -266,12 +276,12 @@ section {
     height: 40px;
     padding: 10px 24px 16px;
     display: flex;
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 400;
 
     &--text {
       margin-left: 10px;
       color: #FFFFFF;
-      font-family: Rubik-Medium, sans-serif;
+      font-weight: 500;
     }
   }
 
@@ -303,13 +313,13 @@ section {
 
   &__input::placeholder {
     color: #A9A9A9;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
   }
 
   &__btn {
     background: transparent;
     padding: 8px 16px;
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
@@ -326,7 +336,7 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px;
 
@@ -443,7 +453,7 @@ section {
 
   &__header {
     font-style: normal;
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     font-size: 28px;
     color: #5C71B2;
     margin-bottom: 16px;
@@ -458,7 +468,7 @@ section {
   }
 
   &__item {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 16px;
   }
 
@@ -466,7 +476,7 @@ section {
     background: #2a5cf6;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
     border-radius: 61px;
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
     padding: 11.5px 24px;
@@ -481,7 +491,7 @@ section {
   @media (max-width: $xl) {
 
     &__info {
-      padding: 75px 150px 0px 100px;
+      padding: 75px 150px 0 100px;
     }
 
     &__header {
@@ -544,7 +554,7 @@ section {
     width: 100%;
     border-radius: 12px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin-top: 14px;
     margin-bottom: 14px;
   }
@@ -566,8 +576,8 @@ section {
     position: absolute;
     height: 176px;
     width: 141px;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     border-top-right-radius: 12px;
   }
 
@@ -577,7 +587,7 @@ section {
 
   &__header {
     font-style: normal;
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     margin-bottom: 4px;
     color: #5C71B2;
     font-size: 16px;
@@ -592,16 +602,15 @@ section {
   }
 
   &__item {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 10px;
     z-index: 3;
   }
 
   &__btn {
     background: #2a5cf6;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
     border-radius: 61px;
-    font-family: Rubik-Medium, sans-serif;
     color: #FFFFFF;
     padding: 6px 12px;
     border: none;
@@ -660,8 +669,8 @@ section {
     background: url("../img/advantage/order4.png") no-repeat;
     width: 165px;
     height: 109px;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     border-bottom-right-radius: 40px;
   }
 
@@ -686,13 +695,13 @@ section {
 
 
   &__title {
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 16px;
     margin-bottom: 8px;
   }
 
   &__text {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.1px;
     color: $grey-text;
@@ -747,7 +756,7 @@ section {
       width: 104px;
       height: 65px;
       bottom: 17px;
-      right: 0px;
+      right: 0;
     }
 
     .warehouse:before {
@@ -781,7 +790,7 @@ section {
     width: 40px;
     height: 40px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 43px;
     border: none;
     cursor: pointer;
@@ -816,7 +825,7 @@ section {
   }
 
   &__title {
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     font-size: 28px;
     line-height: 33px;
 
@@ -824,7 +833,7 @@ section {
 
   &__subheader {
     margin-right: 8px;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     color: $text-non-hover;
@@ -910,7 +919,7 @@ section {
   }
 
   &__name {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     margin-bottom: 12px;
@@ -918,7 +927,7 @@ section {
   }
 
   &__price {
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 24px;
     line-height: 28px;
   }
@@ -934,7 +943,7 @@ section {
     padding: 6px 4px;
     border-radius: 34px;
     background: $grey-light;
-    font-family: Rubik-Medium, sans-serif;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: $grey-text;
@@ -962,7 +971,7 @@ section {
     height: 39px;
     border: none;
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(42, 92, 246, 0.3);
+    box-shadow: 0 0 20px rgba(42, 92, 246, 0.3);
     border-radius: 47px;
 
 
@@ -973,7 +982,7 @@ section {
 
     span {
       color: $hover;
-      font-family: Rubik-Medium, sans-serif;
+      font-weight: 500;
       font-size: 16px;
       line-height: 19px;
     }
@@ -1013,7 +1022,7 @@ section {
   }
 
   .catalog__card:active {
-    box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.30);
+    box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.30);
   }
 
   @media (max-width: 768px) {
@@ -1058,10 +1067,10 @@ section {
 
 
     .catalog__card:active {
-      box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.30);
+      box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.30);
     }
     &__name {
-      font-family: Rubik-Regular, sans-serif;
+      font-weight: 500;
       font-size: 12px;
       margin-bottom: 8px;
     }
@@ -1086,7 +1095,7 @@ section {
       padding: 10px 10px 10px 10px;
       border-radius: 47px;
       background: #FFF;
-      box-shadow: 0px 0px 20px 0px rgba(42, 92, 246, 0.30);
+      box-shadow: 0 0 20px 0 rgba(42, 92, 246, 0.30);
       margin-bottom: 16px;
       width: 148px;
       margin-left: 0;
@@ -1113,14 +1122,14 @@ section {
   }
 
   &__title {
-    font-family: Rubik-Semibold, sans-serif;
+    font-weight: 600;
     font-size: 28px;
     line-height: 33px;
     margin-bottom: 24px;
   }
 
   &__text {
-    font-family: Rubik-Regular, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
   }
@@ -1177,7 +1186,7 @@ section {
 
 
   &__title {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     opacity: 0.7;
@@ -1187,9 +1196,10 @@ section {
   &__link {
     font-size: 14px;
     line-height: 17px;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     letter-spacing: 0.1px;
     color: $text-default;
+    opacity: 0.6;
   }
 
   &__form {
@@ -1201,7 +1211,7 @@ section {
     width: 36px;
     height: 36px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 11.6129px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 11.6129px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     border: none;
     position: absolute;
@@ -1243,7 +1253,7 @@ section {
   }
 
   &__input::placeholder {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px;
   }
@@ -1251,7 +1261,7 @@ section {
 
   &__contacts {
     display: flex;
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.1px;
@@ -1268,11 +1278,11 @@ section {
   }
 
   &__subtext {
-    font-family: Rubik-Light, sans-serif;
+    font-weight: 300;
     color: $text-non-hover;
     font-size: 10px;
     line-height: 12px;
-    padding: 0px;
+    padding: 0;
   }
 
   &__social {
@@ -1311,7 +1321,6 @@ section {
   }
 
   &__copyright {
-    font-family: Rubik-Light, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;

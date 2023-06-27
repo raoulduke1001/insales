@@ -5,7 +5,7 @@ let banner = new Glide('.glide', {
   type: 'carousel',
   startAt: 1,
   perView: 2,
-  autoplay:4000,
+  autoplay: 4000,
   focusAt: 'center',
   gap: 30,
   slideWidth: 1280,
@@ -33,7 +33,7 @@ let banner_mobile = new Glide('.glide-mobile', {
   type: 'carousel',
   startAt: 1,
   perView: 1.3,
-  // autoplay:4000,
+  autoplay: 4000,
   focusAt: 'center',
   gap: 12,
   breakpoints: {
@@ -136,7 +136,6 @@ let width = window.innerWidth
 let button = document.getElementById("top-scroll");
 
 
-
 window.onscroll = () => {
   if (width > 768 && (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
     button.style.display = "block";
@@ -149,11 +148,11 @@ button.addEventListener("click", e => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 })
-document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+document.getElementById('copyright').appendChild(document.createTextNode((new Date().getFullYear()).toString()))
 
 const burger = document.querySelector(".hamburger")
 const menu = document.querySelector(".header__list-mobile")
-const nav = document.querySelector(".header__nav")
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active")
